@@ -12,6 +12,7 @@ public class TicTacToe extends JFrame implements ActionListener {
   public boolean winningStatus;
   private int count = 0;
   private String winnings;
+  ThreadPause TP = new ThreadPause();
 
 
    public TicTacToe(String p1,String p2){
@@ -385,94 +386,54 @@ public void checkMatch(){
      btn1.setBackground(Color.GREEN); 
      btn2.setBackground(Color.GREEN);
      btn3.setBackground(Color.GREEN);
+      System.out.println(player1 + " wins");
     }
     else if (a == 4 && b == 5 && c == 6){
      btn4.setBackground(Color.GREEN); 
      btn5.setBackground(Color.GREEN);
      btn6.setBackground(Color.GREEN);
+      System.out.println(player1 + " wins");
     }
     else if (a == 7 && b == 8 && c == 9){
      btn7.setBackground(Color.GREEN); 
      btn8.setBackground(Color.GREEN);
      btn9.setBackground(Color.GREEN);
-    }
-    else if (a == 1 && b == 4 && c == 7){
-     btn1.setBackground(Color.GREEN); 
-     btn4.setBackground(Color.GREEN);
-     btn7.setBackground(Color.GREEN);
-    }
-    else if (a == 2 && b == 5 && c == 8){
-     btn2.setBackground(Color.GREEN); 
-     btn5.setBackground(Color.GREEN);
-     btn8.setBackground(Color.GREEN);
-    }
-    else if (a == 3 && b == 6 && c == 9){
-     btn3.setBackground(Color.GREEN); 
-     btn6.setBackground(Color.GREEN);
-     btn9.setBackground(Color.GREEN);
-    }
-    else if (a == 1 && b == 5 && c == 9){
-     btn1.setBackground(Color.GREEN); 
-     btn5.setBackground(Color.GREEN);
-     btn9.setBackground(Color.GREEN);
-    }
-    else if (a == 3 && b == 5 && c == 7){
-     btn3.setBackground(Color.GREEN); 
-     btn5.setBackground(Color.GREEN);
-     btn7.setBackground(Color.GREEN);
-    }
-    
-    System.out.println(player1 + " wins");
-  }
+      System.out.println(player1 + " wins");
 
-  public void oWinner(int a, int b,int c){
-    if (a == 1 && b == 2 && c == 3){
-     btn1.setBackground(Color.GREEN); 
-     btn2.setBackground(Color.GREEN);
-     btn3.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
-    }
-    else if (a == 4 && b == 5 && c == 6){
-     btn4.setBackground(Color.GREEN); 
-     btn5.setBackground(Color.GREEN);
-     btn6.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
-    }
-    else if (a == 7 && b == 8 && c == 9){
-     btn7.setBackground(Color.GREEN); 
-     btn8.setBackground(Color.GREEN);
-     btn9.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
     }
     else if (a == 1 && b == 4 && c == 7){
      btn1.setBackground(Color.GREEN); 
      btn4.setBackground(Color.GREEN);
      btn7.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
+      System.out.println(player1 + " wins");
+
     }
     else if (a == 2 && b == 5 && c == 8){
      btn2.setBackground(Color.GREEN); 
      btn5.setBackground(Color.GREEN);
      btn8.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
+      System.out.println(player1 + " wins");
+
     }
     else if (a == 3 && b == 6 && c == 9){
      btn3.setBackground(Color.GREEN); 
      btn6.setBackground(Color.GREEN);
      btn9.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
+      System.out.println(player1 + " wins");
+
     }
     else if (a == 1 && b == 5 && c == 9){
      btn1.setBackground(Color.GREEN); 
      btn5.setBackground(Color.GREEN);
      btn9.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
+      System.out.println(player1 + " wins");
     }
     else if (a == 3 && b == 5 && c == 7){
      btn3.setBackground(Color.GREEN); 
      btn5.setBackground(Color.GREEN);
      btn7.setBackground(Color.GREEN);
-     System.out.println(player2 + " wins");
+      System.out.println(player1 + " wins");
+
     }
     else if (a== 0 && b == 0 && c == 0){
       btn1.setBackground(Color.BLACK);
@@ -487,7 +448,79 @@ public void checkMatch(){
       System.out.println("Both Players Tie");
 
     }
+  }
 
+  public void oWinner(int a, int b,int c){
+    if (a == 1 && b == 2 && c == 3){
+     btn1.setBackground(Color.GREEN); 
+     btn2.setBackground(Color.GREEN);
+     btn3.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 4 && b == 5 && c == 6){
+     btn4.setBackground(Color.GREEN); 
+     btn5.setBackground(Color.GREEN);
+     btn6.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 7 && b == 8 && c == 9){
+     btn7.setBackground(Color.GREEN); 
+     btn8.setBackground(Color.GREEN);
+     btn9.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 1 && b == 4 && c == 7){
+     btn1.setBackground(Color.GREEN); 
+     btn4.setBackground(Color.GREEN);
+     btn7.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 2 && b == 5 && c == 8){
+     btn2.setBackground(Color.GREEN); 
+     btn5.setBackground(Color.GREEN);
+     btn8.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 3 && b == 6 && c == 9){
+     btn3.setBackground(Color.GREEN); 
+     btn6.setBackground(Color.GREEN);
+     btn9.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a == 1 && b == 5 && c == 9){
+     btn1.setBackground(Color.GREEN); 
+     btn5.setBackground(Color.GREEN);
+     btn9.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+;
+    }
+    else if (a == 3 && b == 5 && c == 7){
+     btn3.setBackground(Color.GREEN); 
+     btn5.setBackground(Color.GREEN);
+     btn7.setBackground(Color.GREEN);
+     System.out.println(player2 + " wins");
+
+    }
+    else if (a== 0 && b == 0 && c == 0){
+      btn1.setBackground(Color.BLACK);
+      btn2.setBackground(Color.BLACK);
+      btn3.setBackground(Color.BLACK);
+      btn4.setBackground(Color.BLACK);
+      btn5.setBackground(Color.BLACK);
+      btn6.setBackground(Color.BLACK);
+      btn7.setBackground(Color.BLACK);
+      btn8.setBackground(Color.BLACK);
+      btn9.setBackground(Color.BLACK);
+      System.out.println("Both Players Tie");
+
+
+    }
   }
 
   public void keepGoing(){
